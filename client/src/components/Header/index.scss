@@ -1,0 +1,51 @@
+#header{
+    background-color: #F0F0F2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .container{
+       .row{
+        align-items: center;
+        .content{
+            h1{
+                font-size: 90px;
+                color: #0B1C39;
+                font-weight: 700;
+            }
+            p{
+                max-width: 650px;
+                margin: 40px 0;
+            }
+            button{
+                background-color: #4A4A4B;
+                color: #fff;
+                border: none;
+                padding: 15px 35px;
+                font-weight: 600;
+                transition: 300ms ease;
+
+                &:hover{
+                    background-color: red;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+            }
+        }
+        .image{
+            max-width: 100%;
+        }
+       }
+    }
+}
+@media screen and (max-width:992px) {
+    #header{
+        .container{
+            .row{
+             .image{
+                 display: none;
+             }
+            }
+         }
+    }
+}

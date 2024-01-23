@@ -1,0 +1,30 @@
+#NewArrivals{
+    padding: 50px 0;
+    .container{
+        .sectionHeading{
+            margin-bottom: 30px;
+        }
+        .products{
+            .row{
+                .product{
+                    text-align: center;
+                    .image{
+                        img{
+                            max-width: 400px;
+                        }
+                    }
+                    .title{
+
+                    }
+                    .price{
+                        color: red;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    img{
+        max-width: 100% !important;
+    }
+}

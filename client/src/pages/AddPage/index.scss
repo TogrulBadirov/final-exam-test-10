@@ -1,0 +1,47 @@
+#AddForm{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .error{
+        color: red;
+        font-weight: 600;
+    }
+    background-color: rgb(33, 137, 255);
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    form{
+        
+        .form-control{
+            width: 600px;
+        }
+        .btn{
+            margin: 20px 0;
+        }
+    }
+}
+
+#itemTable{
+    padding: 80px 0;
+    img{
+        max-width: 100px;
+    }
+    .form-control{
+        width: 300px;
+        margin: 10px 0;
+    }
+    .btn{
+        margin: 10px;
+    }
+    table{
+        td{
+            border: 1px solid #777;
+        }
+        tr:nth-child(even){
+            background-color: #777;
+        }
+    }
+    
+}

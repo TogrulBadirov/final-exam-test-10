@@ -38,7 +38,7 @@ app.get('/:id', async(req, res) => {
       }
 })
 
-app.get('/', async(req, res) => {
+app.post('/', async(req, res) => {
     try {
         const item = new Items(req.body)
         await item.save()

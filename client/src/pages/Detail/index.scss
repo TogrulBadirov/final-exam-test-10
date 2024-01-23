@@ -1,0 +1,32 @@
+#detail{
+    padding-top: 100px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .details{
+        display: flex;
+        img{
+            border: 1px solid;
+        }
+        .content{
+            margin-left: 30px;
+        }
+    }
+    .icons{
+        display: inline-block;
+        position: absolute;
+        color: #fff;
+        transform: translateY(0px);
+        transition: 300ms ease;
+        button{
+            background-color: transparent;
+            border: none;
+            color: #000;
+        }
+        i{
+            margin: 0 10px;
+
+        }
+    }
+}

@@ -1,0 +1,47 @@
+footer{
+    padding-top: 50px;
+    .container{
+        .footerElem{
+            margin-top: 30px;
+            img{
+                margin-bottom: 30px;
+            }
+            .link{
+                color: #777;
+                text-decoration: none;
+                padding: 7px 0;
+                display: inline-block;
+            }
+            p{
+                color: #777;
+            }
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            h4{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .copyright{
+        padding: 30px;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #777;
+            span{
+                color: red;
+            }
+            .icons{
+                i{
+                    margin: 0 10px;
+                }
+            }
+        }
+        
+    }
+}
