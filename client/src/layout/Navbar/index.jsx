@@ -19,17 +19,10 @@ const Navbar = () => {
     }, [])
     const {
         basket,
-        addToBasket,
-        isInBasket,
-        removeFromBasket,
-        total,
-        UpdateCountOfBasket,
       } = useContext(BasketContext);
     
       const {
         wishlist,
-        addToWishlist,
-        isInWishlist
     } = useContext(WishlistContext)
   return (
     <nav className={`${isScrolled? "active": ""}`}>

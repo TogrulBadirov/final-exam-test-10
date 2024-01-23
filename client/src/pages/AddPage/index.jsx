@@ -51,10 +51,6 @@ const AddPage = () => {
       <Helmet>
         <title>AddPage</title>
       </Helmet>
-      {/* title: {type:String, required:true},
-  desc: {type:String, required:true},
-  image: {type:String, required:true},
-  price: {type:Number, required:true}, */}
       <section id="AddForm">
         <div className="container">
           <Formik
@@ -143,8 +139,13 @@ const AddPage = () => {
          <button onClick={()=>setSortValue({property:"price",asc:true})} className="btn btn-dark">Sort By Price: Increase</button>
          <button onClick={()=>setSortValue({property:"price",asc:false})} className="btn btn-dark">Sort By Price: Decrease</button>
          <button onClick={()=>setSortValue({property:"price",asc:false})} className="btn btn-dark">Default</button>
+         
+            
+           {loading?
+           <h2>Loading...</h2>
+          :
           <table className="table table-dark">
-            <thead>
+          <thead>
               <tr>
                 <th>Title</th>
                 <th>Desc</th>
@@ -153,34 +154,36 @@ const AddPage = () => {
                 <th></th>
               </tr>
             </thead>
-            <tbody>
-              {items &&
-                items
-                .filter(x=> x.title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()))
-                .sort((a,b)=>{
-                  if (sortValue && sortValue.asc=== true) {
-                    return  (toLowerCase(a[sortValue.property]) > toLowerCase(b[sortValue.property])) ? 1 : ((toLowerCase(b[sortValue.property]) > toLowerCase(a[sortValue.property])) ? -1 : 0)
-                  }
-                  else if (sortValue && sortValue.asc=== false){
-                    return  (toLowerCase(a[sortValue.property]) < toLowerCase(b[sortValue.property])) ? 1 : ((toLowerCase(b[sortValue.property]) < toLowerCase(a[sortValue.property])) ? -1 : 0)
-                  }
-                  else{
-                    return 0
-                  }
-                })
-                .map((item) => (
-                  <tr key={item._id}>
-                    <td>{item.title}</td>
-                    <td>{item.desc}</td>
-                    <td><img src={item.image} alt="" /></td>
-                    <td>{item.price}</td>
-                    <td>
-                      <button className="btn btn-danger" onClick={() => deleteItem(item._id)}>Delete</button>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
+          <tbody>
+          {items &&
+            items
+            .filter(x=> x.title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()))
+            .sort((a,b)=>{
+              if (sortValue && sortValue.asc=== true) {
+                return  (toLowerCase(a[sortValue.property]) > toLowerCase(b[sortValue.property])) ? 1 : ((toLowerCase(b[sortValue.property]) > toLowerCase(a[sortValue.property])) ? -1 : 0)
+              }
+              else if (sortValue && sortValue.asc=== false){
+                return  (toLowerCase(a[sortValue.property]) < toLowerCase(b[sortValue.property])) ? 1 : ((toLowerCase(b[sortValue.property]) < toLowerCase(a[sortValue.property])) ? -1 : 0)
+              }
+              else{
+                return 0
+              }
+            })
+            .map((item) => (
+              <tr key={item._id}>
+                <td>{item.title}</td>
+                <td>{item.desc}</td>
+                <td><img src={item.image} alt="" /></td>
+                <td>{item.price}</td>
+                <td>
+                  <button className="btn btn-danger" onClick={() => deleteItem(item._id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+        </table>
+
+          }
         </div>
       </section>
     </>

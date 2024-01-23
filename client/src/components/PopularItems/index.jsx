@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import  { useContext, useEffect, useState } from "react";
 import "./index.scss";
 import axios from "axios";
 import { BasketContext } from "../../context/BasketContext";
@@ -16,16 +16,10 @@ const PopularItems = () => {
     getAllItems();
   }, []);
   const {
-    basket,
     addToBasket,
-    isInBasket,
-    removeFromBasket,
-    total,
-    UpdateCountOfBasket,
   } = useContext(BasketContext);
 
   const {
-    wishlist,
     addToWishlist,
     isInWishlist
 } = useContext(WishlistContext)

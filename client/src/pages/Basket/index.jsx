@@ -8,14 +8,11 @@ import { Link } from "react-router-dom";
 const Basket = () => {
   const {
     basket,
-    addToBasket,
-    isInBasket,
     removeFromBasket,
     total,
     UpdateCountOfBasket,
   } = useContext(BasketContext);
   const {
-    wishlist,
     addToWishlist,
     isInWishlist
 } = useContext(WishlistContext)

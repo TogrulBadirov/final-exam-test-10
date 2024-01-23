@@ -19,15 +19,10 @@ const Detail = () => {
     getItem();
   }, []);
   const {
-    basket,
     addToBasket,
-    isInBasket,
-    removeFromBasket,
-    total,
-    UpdateCountOfBasket,
   } = useContext(BasketContext);
 
-  const { wishlist, addToWishlist, isInWishlist } = useContext(WishlistContext);
+  const {  addToWishlist, isInWishlist } = useContext(WishlistContext);
   return (
     <>
     <Toaster
